@@ -43,7 +43,8 @@ struct MenuView: View {
                     
                     //MARK: - Play Button
                     NavigationLink {
-                        GameLevelView().onAppear(perform: {
+                        GameLevelView()
+                            .onAppear(perform: {
                             SoundManager.shared.playSound()
                         })
                     } label: {
