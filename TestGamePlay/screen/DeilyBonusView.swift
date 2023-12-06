@@ -45,13 +45,21 @@ struct DeilyBonusView: View {
                     
                 }.animation(.spring, value: procet)
             } else {
-                VStack(spacing: 20) {
+                VStack(spacing: 30) {
                     Text("DAY 1").font(.largeTitle).bold()
+                        .foregroundStyle(Color("ColorApp"))
                     Text("[CONGRATS!]").font(.largeTitle).bold()
+                        .foregroundStyle(Color("ColorApp"))
                     Image(systemName: "gift.fill")
                         .resizable()
                         .frame(width: 150, height: 150)
-                    BonusCapsuleView(text2: "X5").foregroundStyle(.black)
+                        .foregroundStyle(Color("ColorApp"))
+                    Image("GoldTicket")
+                        .resizable()
+                        .frame(width: 60, height: 40)
+                        .rotationEffect(.degrees(-20))
+                    
+                    Text("X5").offset(x: 18, y: -25).bold()
                     Button("Get gif") {
                         isPresentedGifDay.toggle()
                         isCovplite = false
@@ -81,7 +89,7 @@ struct BonusCapsuleView: View {
         ZStack{
             Capsule()
                 .frame(width: 100, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                .foregroundStyle(.white)
+                .foregroundStyle(Color("ColorApp"))
             VStack {
                 Text(text1)
                     .font(.system(size: 15))
