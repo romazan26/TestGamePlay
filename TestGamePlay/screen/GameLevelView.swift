@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameLevelView: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         ZStack {
             GeometryReader { geometry in
@@ -15,27 +16,46 @@ struct GameLevelView: View {
                 let wight = geometry.size.width
                 
                 Image("gameLevel").resizable()
-                
-//                LevelLabelView(text: "7", x: Int(wight * 0.43), y: Int(height * 0.139))
-//                    .frame(width: wight * 0.2,height: height * 0.1)
-//                LevelLabelView(text: "6", x: Int(wight * 0.22), y: Int(height * 0.28))
-//                    .frame(width: wight * 0.2,height: height * 0.1)
-//                LevelLabelView(text: "5", x: Int(wight * 0.43), y: Int(height * 0.45))
-//                    .frame(width: wight * 0.2,height: height * 0.1)
-//                LevelLabelView(text: "4", x: Int(wight * 0.19), y: Int(height * 0.59))
-//                    .frame(width: wight * 0.2,height: height * 0.1)
-//                LevelLabelView(text: "3", x: Int(wight * 0.68), y: Int(height * 0.64))
-//                    .frame(width: wight * 0.2,height: height * 0.1)
-//                LevelLabelView(text: "2", x: Int(wight * 0.58), y: Int(height * 0.845))
-//                    .frame(width: wight * 0.2,height: height * 0.1)
+        
+                LevelLabelView(text: "7")
+                    .frame(width: wight * 0.2,height: height * 0.1)
+                    .offset(x: wight * 0.43, y: height * 0.139)
+                LevelLabelView(text: "6")
+                    .frame(width: wight * 0.2,height: height * 0.1)
+                    .offset(x: wight * 0.22, y: height * 0.28)
+                LevelLabelView(text: "5")
+                    .frame(width: wight * 0.2,height: height * 0.1)
+                    .offset(x: wight * 0.43, y: height * 0.45)
+                LevelLabelView(text: "4")
+                    .frame(width: wight * 0.2,height: height * 0.1)
+                    .offset(x: wight * 0.19, y: height * 0.59)
+                LevelLabelView(text: "3")
+                    .frame(width: wight * 0.2,height: height * 0.1)
+                    .offset(x: wight * 0.68, y: height * 0.64)
+                LevelLabelView(text: "2")
+                    .frame(width: wight * 0.2,height: height * 0.1)
+                    .offset(x: wight * 0.58, y: height * 0.845)
                 LevelLabelView(text: "1")
                     .frame(width: wight * 0.2,height: height * 0.1)
                     .offset(x: wight * 0.11, y: height * 0.845)
                 
-                    .onAppear(perform: {
-                        print(geometry.size)
-                    })
+                Button {
+                    dismiss()
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: wight * 0.11, height: height * 0.06)
+                            .foregroundStyle(Color.white)
+                            .shadow(color: .gray.opacity(0.5), radius: 5)
+                        Image(systemName: "house.fill")
+                            .resizable()
+                            .foregroundStyle(.black)
+                            .frame(width: 40, height: 40)
+                    }
+                } .offset(x: wight * 0.83, y: height * 0.91)
             }
+            
+            
             .navigationBarBackButtonHidden(true)
         }
     }
