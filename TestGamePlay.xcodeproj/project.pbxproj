@@ -19,6 +19,7 @@
 		30AC9F772B1F126A00BF7525 /* CustonProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC9F762B1F126A00BF7525 /* CustonProgressBarView.swift */; };
 		30AC9F792B1F2B4A00BF7525 /* BlurUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC9F782B1F2B4A00BF7525 /* BlurUIView.swift */; };
 		30AC9F7D2B1F4EF700BF7525 /* SettingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC9F7C2B1F4EF700BF7525 /* SettingUIView.swift */; };
+		30CA30472B22234800978B1F /* ShopUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA30462B22234800978B1F /* ShopUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		30AC9F762B1F126A00BF7525 /* CustonProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonProgressBarView.swift; sourceTree = "<group>"; };
 		30AC9F782B1F2B4A00BF7525 /* BlurUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurUIView.swift; sourceTree = "<group>"; };
 		30AC9F7C2B1F4EF700BF7525 /* SettingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUIView.swift; sourceTree = "<group>"; };
+		30CA30462B22234800978B1F /* ShopUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				30AC9F7C2B1F4EF700BF7525 /* SettingUIView.swift */,
 				30AC9F742B1F10B500BF7525 /* DeilyBonusView.swift */,
 				30712CBD2B208F0D00546037 /* GameLevelView.swift */,
+				30CA30462B22234800978B1F /* ShopUIView.swift */,
 			);
 			path = screen;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				30AC9F792B1F2B4A00BF7525 /* BlurUIView.swift in Sources */,
 				30AC9F692B1F043600BF7525 /* MenuView.swift in Sources */,
 				30712CB62B1FB53500546037 /* SoudManager.swift in Sources */,
+				30CA30472B22234800978B1F /* ShopUIView.swift in Sources */,
 				30712CBE2B208F0D00546037 /* GameLevelView.swift in Sources */,
 				30AC9F672B1F043600BF7525 /* TestGamePlayApp.swift in Sources */,
 				30AC9F7D2B1F4EF700BF7525 /* SettingUIView.swift in Sources */,

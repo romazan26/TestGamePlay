@@ -69,9 +69,25 @@ struct MenuView: View {
                             isPresentedGif.toggle()
                             SoundManager.shared.playSound()
                         }, textImage: "gift.fill")
-                        CustomButtonView(action: {
-                            SoundManager.shared.playSound()
-                        }, textImage: "cart.fill")
+                        NavigationLink {
+                            ShopUIView()
+                                .onAppear(perform: {
+                                    SoundManager.shared.playSound()
+                                })
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(width: 60, height: 60)
+                                    .foregroundStyle(Color.white)
+                                    .shadow(color: .gray.opacity(0.5), radius: 5)
+                                Image(systemName: "cart.fill")
+                                    .resizable()
+                                    .foregroundStyle(.black)
+                                    .frame(width: 40, height: 40)
+                            }
+                        }
+
+                       
                     }
                     
                     Spacer()
